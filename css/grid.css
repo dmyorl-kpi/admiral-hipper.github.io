@@ -74,7 +74,7 @@ header{                              /*HEADER*/
     background-color: rgb(0, 0, 138);
     border-top: 2px double silver;
     border-bottom: 2px double silver;
-    
+    height:300%
 }
 
 #logo{
