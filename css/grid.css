@@ -161,6 +161,7 @@ transition: all 0.2s ease-in 0.2s;
     border-style: double;
     border-top:1px;
     border-left: 1px;
+align-self: start;
     justify-content: center;
     background-color:  rgb(0, 0, 138);
     justify-items: center;
