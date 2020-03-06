@@ -311,7 +311,7 @@ input[type="submit"].send-to-profile{
 .send-to-profile{
     background-color: dodgerblue;
 }
-@media screen and (max-width:833px){
+@media screen and (max-width:880px){
     header{
         grid-gap: .4em;
     }
