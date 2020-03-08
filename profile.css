@@ -358,7 +358,7 @@ input[type="submit"].send-to-profile{
         grid-row: 3/4;
     }
 }
-@media screen and (max-width:380px){
+@media screen and (max-width:420px){
     a.send-to-profile{
         grid-column: 1/3;
     }
