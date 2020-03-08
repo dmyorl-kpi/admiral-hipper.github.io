@@ -201,6 +201,7 @@ transition: all 0.2s ease-in 0.2s;
     color:white;
     display: block;
     font-size: 1.5em;
+    text-overflow: inherit;
 }
 .menu:after{
 content: '';
@@ -303,17 +304,19 @@ footer{
 a.send-to-profile{
 grid-column: 1/2;
 text-align: center;
-height: 150%;
 }
 input[type="submit"].send-to-profile{
     grid-column: 2/3;
     grid-row: 1/2;
-    height: 150%;
     border:0px;
     cursor: pointer;
 }
 .send-to-profile{
     background-color: dodgerblue;
+    text-align: center;
+    padding: 5px 3px;
+    border-radius: 5px;
+    color:white;
 }
 .about-me{
     grid-column: 1/3;
@@ -356,11 +359,17 @@ input[type="submit"].send-to-profile{
     }
 }
 @media screen and (max-width:320px){
+    a.send-to-profile{
+        grid-column: 1/3;
+    }
+    input[type="submit"].send-to-profile{
+        grid-column: 1/3;
+    }
     .serve{
         font-size: 1em;
     }
     .menu{
         font-size: 1em;
     }
-    .type-info,.information{font-size: 1em;}
+    .type-info,.information{font-size: .7em;}
 }
