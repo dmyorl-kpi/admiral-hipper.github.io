@@ -24,13 +24,12 @@ aside{
     border: 1px solid black;
 }
 .article{
+    padding: 3px 10px;
     grid-column: 2/4;
     display: grid;
     grid-gap: .5em;
 grid-template-columns: 1fr 2fr;
-grid-template-rows: 3fr 2fr 2fr;
-
-
+grid-template-rows: auto;
 }
 .article-after{                     /*ARTICLE-AFTER*/
     grid-column: 1/4;
@@ -53,7 +52,10 @@ grid-template-rows: 3fr 2fr 2fr;
     height: 30px;
     border:2px dotted blue;
     border-radius: 15px;
+    justify-self: end;
+    align-self: center;
 }
+
 .authorpubl{
     color:rgb(0, 0, 150);
     font-weight: bold;
@@ -61,12 +63,15 @@ font-family: 'bree',sans-serif;
 display: grid;
 grid-template-columns: 1fr 1fr;
 justify-self: start;
+align-self: flex-end;
 }
 .authname{
    align-self: center;
+   justify-self: start;
 }
 .pubtext{
     grid-column: 1/3;
+    align-self: start;
 }
 
 header{                              /*HEADER*/
@@ -161,8 +166,6 @@ header{                              /*HEADER*/
 color: rgb(3, 3, 161);   
 transition: all 0.2s ease-in 0.2s;
 }
-
-
 /*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 .menu-default{
     display: grid;
@@ -255,13 +258,14 @@ footer{
     grid-row: 3/4;
 }
 /*Profile*/
-
 .info-user{
+    margin-bottom: 2em;
     grid-column: 1/3;
     grid-row:1/2;
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 1fr;
+    grid-row-gap: 1em;
 }
 #profile-avatar{
     width:150px;
@@ -269,10 +273,9 @@ footer{
     grid-column: 1/2;
     border: 2px solid black;
     border-style: double;
-    grid-row: 1/2;
+    grid-row: 1/3;
 }
 .profile-info{
-    
     display: grid;
     grid-column: 2/3;
     grid-row:1/2;
@@ -307,9 +310,13 @@ input[type="submit"].send-to-profile{
     grid-row: 1/2;
     height: 150%;
     border:0px;
+    cursor: pointer;
 }
 .send-to-profile{
     background-color: dodgerblue;
+}
+.about-me{
+    grid-column: 1/3;
 }
 @media screen and (max-width:880px){
     header{
@@ -328,12 +335,32 @@ input[type="submit"].send-to-profile{
     .article{
         grid-column: 3/4;
     }
+    .article-after{                     /*ARTICLE-AFTER*/
+        grid-column: 1/4;
+        grid-row: 2/3;
+    }
     .menu-default{
         grid-column: 1/3;
+    }
+    #profile-avatar{
+        grid-column:1/3;
+        margin-bottom: 150px;
+    }
+    .profile-info{
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+    .send-form{
+        grid-column: 1/3;
+        grid-row: 3/4;
     }
 }
 @media screen and (max-width:320px){
     .serve{
         font-size: 1em;
     }
+    .menu{
+        font-size: 1em;
+    }
+    .type-info,.information{font-size: 1em;}
 }
