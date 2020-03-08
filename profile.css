@@ -365,6 +365,12 @@ input[type="submit"].send-to-profile{
     .serve{
         font-size: 1em;
     }
+    .menu-default{
+        width:100%
+    }
+    .article{
+        padding-left:10px;
+    }
     .menu{
         font-size: 1em;
     }
