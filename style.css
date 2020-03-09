@@ -21,3 +21,8 @@ div>.div{
     align-self: center;
     font-size: 1.3em;
     }
+@media screen and (max-width:400px){
+.div{
+grid-column:1/3;
+}
+}
