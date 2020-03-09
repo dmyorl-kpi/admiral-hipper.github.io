@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin:0;
+}
+body{
+    background:linear-gradient(to left,dodgerblue,white);
+    display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 2em;
+}
+body div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.div{
+    grid-column: 1/2;
+}
+div>.div{
+    align-self: center;
+    font-size: 1.3em;
+    }
