@@ -1,11 +1,8 @@
-
-    $('.btn-menu').click(function(){
+$('.btn-menu').click(function(){
         $('.menu-default').toggleClass('menu-after')
         setTimeout('')
-        $('.article').toggleClass('article-after')
+        $('.info-user').toggleClass('info-after')
     })
    function O(obj){
        return typeof obj=='object'?obj:document.getElementById(obj)
    }
-    
-    
