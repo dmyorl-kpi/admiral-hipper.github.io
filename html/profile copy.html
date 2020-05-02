@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/profile.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic|Playfair+Display:400,700&subset=latin,cyrillic">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+  
+</head>
+<body class="sait">
+    <header><span id="burger"><span class="btn-menu"><span id="butt-menu"></span></span></span>
+     <span class="headert" ><a href=""id="logo">Kingdom </a></span>
+        <section id="service">
+            <span ><a href="" class="serve" >About us</a></span>
+            <span ><a href="" class="serve">Sign up</a></span>
+            <span ><a href="" class="serve">Login</a></span>
+            </section>
+           
+    </header>
+    <div class="menu-default">
+       <div id="form1"> <form id="search" action="" method="post">
+            <input class="field1" type="text" placeholder="Поиск учасников">
+            <input class="search" id="butt-ser" type="submit" value="&#128269;">
+        </form>
+        </div>
+        <span><a href="" class="menu" id="menu0">My page <i class="fa fa-user" aria-hidden="true"></i></a></span>
+        <span><a href="" class="menu" id="menu1">Friends <i class="fa fa-users" aria-hidden="true"></i></a></span>
+        <span><a href="" class="menu" id="menu2">Messages <i class="fa fa-comments-o" aria-hidden="true"></i></a></span>
+        <span><form action="../php/profile.php" method="post" id="edit"></form><span class="menu"><input form="edit" id="menu4" type="submit" class="" value="Edit profile"><i class="fa fa-pencil" aria-hidden="true"></i></span></span></span>
+        <span><a href="" class="menu" id="menu5">Settings <i class="fa fa-cogs" aria-hidden="true"></i></a></span> 
+    </div>
+    <div class="article">
+        <form method='post' action='profile.php' enctype='multipart/form-data'class="info-user">
+            <span id="img">
+            <div>
+            <img src="$profile_image" class="profile-avatar" alt="Your avatar">
+            </div>
+            <input name="avatar" id="file3" type="file">
+            <label for="file" class="filelabel"><i class="fa fa-upload" aria-hidden="true"></i>  Choose a photo</label>
+            </span>
+            <span class="profile-info">
+             <span class="type-info">Username:</span><input value="$profile_name" class="information" type="text" name="username">
+             <span class="type-info">Gender:</span><span class="information"><input type="radio" value="1" id="man" class="gender" name="gender">Man <input name="gender" type="radio" id="woman" value="2">Woman</span>$solution
+             <span class="type-info">Country:</span><input class="information" value="$profile_country" type="text" name="country">
+             <span class="type-info">City:</span><input class="information" value="$profile_city" type="text" name="city">
+                </span>
+                <span class="send-form">
+            <input type="submit" class="send-to-profile" value="Save changes">
+            <input type="hidden" name="d" value="$login_profile">
+            </span>
+            <span class="about-me"><h2>ABOUT ME</h2><textarea maxlength="800" name="my_text" id="about">$profile_text</textarea></span>
+            <span class="filelabel" id="add-publ">Add new publication</span>
+            </form>
+            <form action="" method="POST"id="new-pub" class="publication" enctype='multipart/form-data'>
+                <a href="" class="authorpubl"><img class="avatar" src="$profile_image"><span class="authname">Dima</span></a>
+                <textarea name="pub-text" id="text-pub" placeholder="Type here" maxlength="400"></textarea>
+                <span id="img">
+                    <div>
+                    <img src="___profile_image" class="profile-avatar" alt="Your avatar">
+                    </div>
+                    <input name="image1" id="file" type="file">
+                    <label for="file" class="filelabel"><i class="fa fa-upload" aria-hidden="true"></i>  Choose a photo</label>
+                    </span>
+                    <span id="img">
+                        <div>
+                        <img src="___profile_image" class="profile-avatar" alt="Your avatar">
+                        </div>
+                        <input name="image2" id="files" type="file" >
+                        <label for="file" class="filelabel"><i class="fa fa-upload" aria-hidden="true"></i>  Choose a photo</label>
+                        </span>
+                        <span id="img">
+                            <div>
+                            <img src="___profile_image" class="profile-avatar" alt="Your avatar">
+                            </div>
+                            <input name="image3" id="file1" type="file" >
+                            <label for="file" class="filelabel"><i class="fa fa-upload" aria-hidden="true"></i>  Choose a photo</label>
+                            </span>
+                            <span id="img">
+                            <div>
+                            <img src="" class="profile-avatar" alt="" id="cleaner-add">
+                            </div>
+                                <input type="submit" class=""id="add-public" value="">    
+                                <input type="hidden" name="d" value="$login_profile">
+                                 <label id="submit-pub" class="filelabel" for="add-public">ADD ALL</label>
+                                </span>
+                                        </form>
+    </div>
+    <footer>&copy;All grants are protected</footer>
+    <script src="../javascript.js"></script>
+</body>
+</html>

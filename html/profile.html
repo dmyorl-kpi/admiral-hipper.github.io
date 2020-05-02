@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/profile.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic|Playfair+Display:400,700&subset=latin,cyrillic">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+  
+</head>
+<body class="sait">
+    <header><span id="burger"><span class="btn-menu"><span id="butt-menu"></span></span></span>
+     <span class="headert" ><a href=""id="logo">Kingdom </a></span>
+        <section id="service">
+            <span ><a href="" class="serve" >About us</a></span>
+            <span ><a href="" class="serve">Sign up</a></span>
+            <span ><a href="" class="serve">Login</a></span>
+            </section>
+           
+    </header>
+    <div class="menu-default">
+       <div id="form1"> <form id="search" action="" method="post">
+            <input class="field1" type="text" placeholder="Поиск учасников">
+            <input class="search" id="butt-ser" type="submit" value="&#128269;">
+        </form>
+        </div>
+        <span><a href="" class="menu" id="menu0">My page <i class="fa fa-user" aria-hidden="true"></i></a></span>
+        <span><a href="" class="menu" id="menu1">Friends <i class="fa fa-users" aria-hidden="true"></i></a></span>
+        <span><a href="" class="menu" id="menu2">Messages <i class="fa fa-comments-o" aria-hidden="true"></i></a></span>
+        <span><form action="../php/profile.php" method="post" id="edit"></form><span class="menu"><input form="edit" id="menu4" type="submit" class="" value="Edit profile"><i class="fa fa-pencil" aria-hidden="true"></i></span></span></span>
+        <span><a href="" class="menu" id="menu5">Settings <i class="fa fa-cogs" aria-hidden="true"></i></a></span> 
+    </div>
+    <script>
+    </script>
+    <script src="../javascript.js"></script>
+    <div class="article">
+        <span class="info-user">
+            <span class="profile-avatar"><img src="../image/db63e2f5caed47d198097ed7bbe09ec6.jpg" alt=""></span>
+            <span class="profile-info">
+             <span class="type-info">Username:</span><span class="information">$profile_name</span>
+             <span class="type-info">Gender:</span><span class="information">$gender</span>
+             <span class="type-info">Country:</span><span class="information">$profile_country</span>
+             <span class="type-info">City:</span><span class="information">$profile_city</span>
+             </span>
+
+             <form action="" class="send-form">
+             <a href="messages.php?id=$id_profile" class="send-to-profile">Send message</a>
+             <input type="submit" class="send-to-profile" value="Add to friends">
+             <input type="hidden" name="friend">
+             </form>
+             
+             <span class="about-it"><h2>ABOUT ME</h2><span>$profile_text</span></span>
+             </span>
+
+
+    <span class="publication">
+        <a href="" class="authorpubl"><img class="avatar" src="../image/d0719f101299a06d6f97ffc55fd9b82c.jpg"><span class="authname">Dima</span></a>
+        <span class="pubtext">$pubtext  Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati vitae a necessitatibus, ut ducimus officiis quibusdam alias autem hic temporibus, quae totam. Aperiam ea maiores id adipisci provident. Delectus ipsum commodi soluta rerum adipisci officiis expedita iusto in sed facilis? Laboriosam sit nulla magni, temporibus id nemo dolor, mollitia nobis, labore ipsam voluptatem maiores! Ab magnam ducimus minima adipisci laudantium. Fugit aut ducimus, atque, quia dolor nisi obcaecati ex amet dignissimos rerum rem asperiores laboriosam cumque fugiat sed voluptates tenetur odit autem ea. Aliquid optio excepturi unde porro aut, ut assumenda animi accusantium similique et distinctio velit nihil cupiditate sit.</span>
+        <img class="pubimage" src="../image/8457617f5beda0291c8fa64fc5f969e8be1.jpg" alt="">
+        <img class="pubimage" src="../image/$pubimage2" alt="">
+        <img class="pubimage" src="../image/$pubimage3" alt="">
+    </span>
+    <span class="publication">
+        <a href="" class="authorpubl"><img class="avatar" src="../image/94d0719f101299a06d6f97ffc55fd9b82c1.jpg"><span class="authname">Dima</span></a>
+        <span class="pubtext">$pubtext  Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati vitae a necessitatibus, ut ducimus officiis quibusdam alias autem hic temporibus, quae totam. Aperiam ea maiores id adipisci provident. Delectus ipsum commodi soluta rerum adipisci officiis expedita iusto in sed facilis? Laboriosam sit nulla magni, temporibus id nemo dolor, mollitia nobis, labore ipsam voluptatem maiores! Ab magnam ducimus minima adipisci laudantium. Fugit aut ducimus, atque, quia dolor nisi obcaecati ex amet dignissimos rerum rem asperiores laboriosam cumque fugiat sed voluptates tenetur odit autem ea. Aliquid optio excepturi unde porro aut, ut assumenda animi accusantium similique et distinctio velit nihil cupiditate sit.</span>
+        <img class="pubimage" src="../image/$pubimage1" alt="">
+        <img class="pubimage" src="../image/$pubimage2" alt="">
+        <img class="pubimage" src="../image/$pubimage3" alt="">
+    </span>
+    </div>
+    <footer>&copy;All grants are protected</footer>
+</body>
+</html>
