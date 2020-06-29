@@ -1,0 +1,29 @@
+@font-face{
+    font-family: "Navbar Brand";
+    src: url("fonts/Notable-Regular.ttf") format("truetype");
+}
+#header{
+    background: #f3efe1;
+    color: white;
+    box-shadow:1px 2px 10px dodgerblue;
+}
+body{
+    background: linear-gradient(to right,white,#f3efe1);
+}
+.mycard:hover{
+box-shadow:1px 1px 10px black;
+transform: translateY(-2px);
+transition: all .2s ease 0s;
+}
+.headphones{
+    text-shadow:1px 1px 2px black;
+}
+footer{
+padding: 15px;}
+ @media (max-width:300px){
+    .navbar-light .navbar-brand{
+        font-family: Navbar Brand,sans-serif;
+    }
+ }
+ @media (max-width:770px){
+ }
