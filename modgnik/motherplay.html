@@ -90,6 +90,8 @@ request.setRequestHeader('Content-Type','application/json')
 request.responseType='json'
 request.send()
 request.onload=function(){
+  firstInterval=0
+  second=0
     audio=request.response
     i=-1
     url=audio.rock['Guns n Roses']['Welcome']
@@ -99,9 +101,9 @@ request.onload=function(){
               {
                 i++
                 $('.music-list').append('<div class="mt-3 container-fluid"><div class="row nak"> <label for="formControlRange" class="col-12 text-md-left col-sm-12">'+item+'-'+musicName+'</label></div>')
-                $('.music-list').append(' <div class="row"><button id="p'+i+'" class="btn play btn-outline-success col-lg-2 col-md-2 col-sm-2 w-50 ml-lg-3 ml-md-3 ml-lg-3 ml-sm-3">Play  <input type="hidden" value="'+i+'" name=""></button><button class="btn pause btn-danger w-50 col-lg-2 col-md-2 col-sm-2">Stop <input type="hidden" value="'+i+'" name=""></button></div></div>')
-                $('.music-list').append('<div class="row mt-2"> <div class="col-md-5 col-sm-12 col-lg-5"><input type="range" value="0" min="0" max="100" step="1" class="form-control-range"  id="r'+i+'"></div></div>')
-                $('#listener').append('<audio class="track" src="'+musicUrl+'" id="s'+i+'"></audio>')
+                $('.music-list').append(' <div class="row"><button id="p'+i+'" class="btn play btn-outline-warning col-lg-2 col-md-2 col-sm-2 w-50 ml-lg-3 ml-md-3 ml-lg-3 ml-sm-3">Play  <input type="hidden" value="'+i+'" name=""></button><button class="btn pause btn-info w-50 col-lg-2 col-md-2 col-sm-2">Stop <input type="hidden" value="'+i+'" name=""></button></div></div>')
+                $('.music-list').append('<div class="row mt-2"> <div class="col-md-5 col-sm-12 col-lg-5"><input type="range" value="0" min="0" max="100" step="0.1" class="form-control-range"  id="r'+i+'"><input type="hidden" value="'+i+'" name=""></div></div>')
+                $('#listener').append('<audio controls class="track" src="'+musicUrl+'" id="s'+i+'"></audio>')
                 // $('.nak').append(' <div class="row nak"> <label for="formControlRange" class="col-6 text-md-left col-sm-12">'+imemsss+'</label></div>')
                 // $('.nak').append('<div class="row"><button class="btn btn-outline-success col-lg-2 col-md-2 col-sm-2 w-50 ml-lg-3 ml-md-3 ml-lg-3 ml-sm-3">Play</button><button class="btn btn-danger w-50 col-lg-2 col-md-2 col-sm-2">Stop</button></div>')
                 }
@@ -109,8 +111,17 @@ request.onload=function(){
 
         })
     })
-    
+    $('.form-control-range').change(function(){
+      var id=$(this).next().val()
+      var audio=document.getElementById('s'+id)
+      
+        audio.currentTime=audio.duration/100*$(this).val()
+        $('.navbar-brand').html(audio.currentTime)
+      
+    })
     $('.play').click(function(){
+      if(firstInterval)
+       clearInterval(firstInterval)
       id=$(this).children().first().val()
       audio=document.getElementById("s"+id)
       tracks=document.getElementsByTagName('audio')
@@ -120,7 +131,7 @@ request.onload=function(){
         tracks[i].currentTime=0}
       }
       audio.play()
-      setInterval("audioCurentTime(id)",1000)
+      firstInterval=setInterval("audioCurentTime(id)",2000)
       audio = document.getElementsByTagName("audio");
 for (let i = 0; i < audio.length; i++) {
   audio[i].addEventListener('ended', function() {
@@ -129,8 +140,13 @@ for (let i = 0; i < audio.length; i++) {
       for(j=0;j<tracks.length;j++){
         if(j!=i){
         tracks[j].pause()
-        tracks[j].currentTime=0}
+        tracks[j].currentTime=0
+        $('#r'+j).val(0)}
       }
+      b=i+1
+      if(second)
+       clearInterval(second)
+      second=setInterval("audioCurentTime(b)",2000)
       audio[i + 1].play();
     }
   });
@@ -170,7 +186,7 @@ for (let i = 0; i < audio.length; i++) {
        }
        function audioCurentTime(id){
         $('#r'+id).val(document.getElementById('s'+id).currentTime/document.getElementById('s'+id).duration*100)
-       
+        
        }
     </script>
     
