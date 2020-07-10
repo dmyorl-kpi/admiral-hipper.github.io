@@ -33,9 +33,7 @@ padding: 15px;}
     -4px -4px 10px dodgerblue;
     border-radius: 10px;
 }
-.mycontainer:hover{
-    border: 1px solid rgb(199, 76, 76)
-}
+
 .scroll{
     background-color: rgb(248, 246, 122,0.5);
     border:1px solid black;
