@@ -15,11 +15,34 @@ box-shadow:1px 1px 10px black;
 transform: translateY(-2px);
 transition: all .2s ease 0s;
 }
+.nak{
+    
+}
 .headphones{
     text-shadow:1px 1px 2px black;
 }
 footer{
 padding: 15px;}
+.line{
+    border-right:3px solid black;
+    color:rgba(182, 80, 80, 0);
+    width:0;
+}
+.mycontainer{
+    box-shadow:4px 4px 10px orange,
+    -4px -4px 10px dodgerblue;
+    border-radius: 10px;
+}
+.mycontainer:hover{
+    border: 1px solid rgb(199, 76, 76)
+}
+.scroll{
+    background-color: rgb(248, 246, 122,0.5);
+    border:1px solid black;
+    padding:0;
+    border-radius: 10px;
+    
+}
  @media (max-width:300px){
     .navbar-light .navbar-brand{
         font-family: Navbar Brand,sans-serif;
