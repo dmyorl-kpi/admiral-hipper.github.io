@@ -55,8 +55,6 @@
     </nav> 
  </div>
  <div class="jumbotron mt-1">
-  <audio controls class="track" src="https://drive.google.com/uc?export=download&id=1haT9wWY5A9uBFXPCzBZRyntKz1R4_Vz1"></audio>
-  <audio controls class="track" src="https://drive.google.com/uc?export=download&id=1iUoeI4hQfykzAXrZCKb1Xrp_9bIyRTWb"></audio>
   <h1 class="display-6">Mother playlist</h1>
   <p class="lead">This site is only for you</p>
   <hr class="my-3"></hr>
@@ -116,7 +114,6 @@ request.onload=function(){
     for (let i = 0; i < audio.length; i++) {
   audio[i].addEventListener('ended', function() {
     if (audio[i].duration === audio[i].currentTime) {
-      audio[i].src=null
       audio[i + 1].play();
     }
   });
